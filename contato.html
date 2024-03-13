@@ -55,48 +55,47 @@
             <hr> 
         </header>
 
-        <main>
-
-            <h2 class="title-median">Contato</h2>
-            <p class="contact-text">Os campos com * são de preenchimento obrigatório!</p>
-
-            <!--Corpo do Formlario-->
-            <form class="contact">
-
-                <!--Campos do Formulario-->
-                <label class="contact-label">
-                    Nome*
-                    <input class="contact-field" type="texto" required>
-                </label>
-
-                <label class="contact-label">
-                    E-mail*
-                    <input class="contact-field" type="email" required>
-                </label>
-
-                <label class="contact-label">
-                    Assunto*
-                    <select class="contact-field">
-                        <option>NewsLetter</option>
-                        <option>Dúvidas</option>
-                        <option>Sugestões</option>
-                        <option>Críticas</option>
-                    </select> 
-                </label>
-
-                <label class="contact-label">
-                    Mensagem*
-                    <textarea class="contact-field" required></textarea>
-                </label>
-
-                <button class="button-form" type="button">Enviar</button>
-
-            </form>
-
-            <div class="contact-maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.3383833744801!2d-41.77816947774122!3d-2.9090749002285223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec2fe7b0a81c43%3A0x46b78ca8ceae1148!2sSENAI%20Servi%C3%A7o%20Nacional%20de%20Aprendizagem%20Industrial!5e0!3m2!1spt-PT!2sbr!4v1709730612027!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </main>
+        <!--Corpo do Site-->    
+        
+    <main>
+        <!-- <h1> - Titulo, <p> - parágrafo--> 
+        <h2 class="title-median">Contato</h2>
+        <p class="contact-text">Os campos com * são de preenchimento obrigatório!</p>
+        
+        <!--Corpo do formulario-->
+        <form class="contact">
+            <!--Campo Nome-->
+            <label class="contact-label">
+                Nome*
+                <input type="text" class="contact-field" required>
+            </label>
+            <!--Campo Email-->
+            <label class="contact-label">
+                E-mail*
+                <input type="email" class="contact-field" required>
+            </label>
+            <!--Campo Assunto-->
+            <label class="contact-label">
+                Assunto
+                <select class="contact-field">
+                    <option>Newsletter</option>
+                    <option>Dúvidas</option>
+                    <option>Sugestões</option>
+                    <option>Críticas</option>
+                </select>
+            </label>
+            <!--Campo Mensagem-->
+            <label class="contact-label">
+                Mensagem*
+                <textarea required class="contact-field"></textarea>
+            </label>
+            <!--Botão Enviar-->
+            <button class="button-form">Enviar</button>
+        </form>
+        <div class="contact-maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31876.942702809178!2d-41.7108632!3d-2.9257019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec3b2a815e2759%3A0x7df0df755be3ebde!2sPar%C3%B3quia%20Santa%20L%C3%BAzia!5e0!3m2!1spt-BR!2sbr!4v1706845164517!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
 
         <!--Rodape do Site-->
         <footer class="main-footer">
