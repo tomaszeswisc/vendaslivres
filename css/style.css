@@ -24,7 +24,7 @@
 
 /*Dar fonte a todo body, com peso Regula 400 e tamanho 22px, 
 caso nao ache a fonte importada utiliza a fonte secundaria*/
-body {
+body, button, input {
    font: 400 22px "Roboto", sans-serif;
 
 }
@@ -239,4 +239,53 @@ textarea.contact-field {
    flex-wrap: wrap;
    justify-content: space-between;
    gap: 40px;
+   padding-bottom: 30px;
 }
+
+.product {
+   display: flex; /*Colocar todos na mesma linha*/
+   flex-direction: column; /*Alinha em coluna, um embaixo do outro*/
+   align-items: center; /*Alinha os item ao centro*/
+}
+
+.product-title {
+   font-size: 20px;
+   margin-bottom: 6px;
+}
+
+.product-image {
+   width: 320px; /*travar a largura da imagem para colocar 
+   colocar 2 produtos por linha, 
+   pq o espaço do projeto é de 600px*/
+   height: 220px; /*travar a altura da imagem*/
+   margin-bottom: 20px; /*Aplica um espaço abaixo da imagem*/
+}
+
+.product-price-container{
+   width: 100%; /*Ocupar 100% do espaço disponivel*/
+   display: flex; /*alinha os elementos na mesma linha*/
+   justify-content: space-between;
+   align-items: center;
+}
+
+.product-price {
+   font-family: "Raleway", sans-serif;
+   font-size: 20px;
+   font-weight: bold; 
+}
+
+.button-hover {
+   background-color: var(--skyblue);
+   color: var(--blue);
+   border: 2px solid var(--skyblue); 
+   border-radius: 10px;
+   padding: 4px 2px;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.button-hover:hover {
+   background-color: transparent;
+}
+
+
