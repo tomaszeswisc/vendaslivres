@@ -298,3 +298,78 @@ textarea.contact-field {
    padding-bottom: 6px;
    text-transform: uppercase; /*transforma o texto em maiusculas*/
 }
+
+.second-col, 
+.third-col {
+   width: 25%; /*Fazer a segunda e a terceira coluna ocupem o mesmo tamanho*/
+}
+
+.cart-product {
+   padding: 8px; /*Criar um espaçamento pequeno entre os elementos*/
+}
+
+.product-identification {
+   display: flex; /*Coloca os elementos na mesma linha*/
+   align-items: center; /*centraliza os objetos*/
+}
+
+.cart-product-image {
+   width: 120px;
+   height: 80px;
+}
+
+.cart-product-title {
+   margin-left: 15px; /*Cria um espaçamento entre a imagem e o Nome do produto*/
+}
+
+.cart-product-price {
+   font-family: "Raleway", sans-serif;
+}
+
+.product-qnt-input {
+   width: 45px;
+   height: 35px;
+   border: 2px solid var(--blue);
+   border-radius: 5px;
+   background-color: var(--silver);
+   text-align: center;
+}
+
+.remove-product-button {
+   background-color: var(--red);
+   color: var(--white);
+   border: 0;
+   border-radius: 5px;
+   padding: 4px;
+   margin-left: 5px;
+}
+
+.remove-product-button:hover {
+   filter: brightness(0.8); /*diminui o brilho com essa propriedade*/
+}
+
+.cart-total-container {
+   border-top: 1px solid var(--darkgray);
+   text-align: end; /*leva para o final do campo*/
+   padding: 6px 16px 0 0;/*top direita baixo esquerda*/
+}
+
+.cart-total-container strong{
+   margin-right: 10px;
+}
+
+.purchase-button {
+   display: flex; /*quebrar para centralizar*/
+   padding: 16px 20px; /*cima/baixo direita/esquerda*/
+   background-color: var(--blue);
+   color: var(--white);
+   border-radius: 6px;
+   text-transform: uppercase;
+   border: 0;
+   font-weight: bold;
+   margin: 24px auto 0;/*cima esquer/direita baixo*/
+}
+
+.purchase-button:hover {
+   filter: brightness(0.8);
+}
