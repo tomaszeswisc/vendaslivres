@@ -1,0 +1,604 @@
+/*Importa fonte do google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
+
+/*Criação de Variaveis no root do CSS*/
+
+:root {
+   --blue: #00008B;
+   --gray: #555555;
+   --skyblue: #00BFFF;
+   --silver: #c0c0c0;
+   --red: #ff0000;
+   --white: #ffffff;
+   --darkgray: #959595;
+}
+
+/*Reset em todos os elementos*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Dar fonte a todo body, com peso Regula 400 e tamanho 22px, 
+caso nao ache a fonte importada utiliza a fonte secundaria*/
+body, button, input {
+   font: 400 22px "Roboto", sans-serif;
+
+}
+
+/*Retira as bolinhas dos elementos li*/
+li {
+   list-style-type: none; 
+}
+
+/*Botão voltar ao topo*/
+
+#voltarAoTopo {
+   display: none;
+   position:fixed;
+   bottom: 200px;
+   right: 20px;
+   background-color: var(--gray);
+   color: var(--blue);
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   border-radius: 50%;
+   margin-bottom: 50px;
+}
+#voltarAoTopo i {
+   font-size: 20px;
+}
+
+/*Header*/
+
+.main-header {
+    background-image: url(background-image.png); /*Adiciona imagem no fundo*/
+    background-position: 50% 39%; /*Alinha os elementos nos eixos x e y*/
+    position: relative; /* Para manter o conteúdo sobre o vídeo */
+    z-index: 1; /* Para que o conteúdo fique acima do vídeo */
+    display: flex; /*colocar elementos centralizados*/
+    flex-direction: column; /*alinha s elementos um embaixo do outro*/
+    align-items: center; /*centralizar os elementos*/
+    padding-bottom: 40px;
+}
+
+.main-nav {
+    width: 100%; /*Ocupar toda a area disponivel*/
+ /* max-width: 600px; /*trava a largura maxima que definir para o projeto
+    padding: 0 16px; /* primeiro é cima e baixo, segundo é esquerda e direita */
+    /*como repete no container ele é apagado e colocamos no html a class container junto*/
+}
+
+.header-list-container {
+    display: flex; /*Colocar os elementos na mesma linha*/
+    justify-content: space-between; /*adiciona espaçamento entre os itens*/
+    align-items: center; /*garantir que fiquem alinhados na mesma linha*/
+    padding: 16px 0; /* primeiro é cima e baixo, segundo é esquerda e direita */
+ }
+
+ .nav-item {
+    text-transform: uppercase; /*Deixar todas as letras em maiusculo*/
+    color: var(--blue);
+ }
+
+ /* Estilo para os subitens */
+ 
+ /* Ocultar os subitens por padrão */
+.sub-items  {
+   display: none;
+   position: fixed;
+   /*background-color: rgba(0, 0, 0, 0.5);Transparência média no fundo */
+   padding: 10px;
+   border-radius: 5px;
+}
+
+/* Mostrar os subitens quando o mouse passa sobre o item pai */
+.nav-item:hover .sub-items {
+   display: block;
+}
+
+/* Estilo dos subitens */
+.sub-items li {
+   margin-bottom: 5px;
+ }
+ 
+ .sub-items a {
+   color: var(--blue); /* Cor do texto dos subitens */
+   text-decoration: none;
+ }
+ 
+ .sub-items a:hover {
+   text-decoration: none;
+   background-color: rgba(0, 0, 0, 0.5); /* Transparência média no fundo */
+   border-radius: 5px;
+   padding: 0px 3px;
+   color: var(--blue);
+ }
+
+ /* Estilo para o vídeo de fundo */
+.video {
+   position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+ 
+
+ hr {
+    width: 100%; /*Ocupar toda a area disponivel*/
+ }
+
+ .nav-item a {
+    text-decoration: none; /*remove o underline do ancora*/
+    color: inherit; /*herda a cor do elemento pai (neste caso é o nav-item)*/
+    
+ }
+
+ .nav-item:hover {
+   
+   background-color: rgba(0, 0, 0, 0.5); /* Transparência média no fundo */
+   border-radius: 5px;
+   padding: 0px 3px;
+ }
+ 
+.logo-zoom {
+   transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
+}
+
+.logo-zoom:hover {
+   transform: scale(1.4);/* Aumenta o tamanho do logo em 20% ao passar o mouse sobre ele */
+}
+ .main-about {
+   padding: 40px 0px 64px;
+}
+
+.container {
+   max-width: 600px; /*trava a largura maxima que definimos para o projeto*/
+   padding: 0 16px; /* primiro cima/baixo, segundo esquerda/direita*/
+   margin: 0 auto; /*nao aplica cima/baixo, o auto distribui o maximo possivel para esquerda e direita*/
+}
+
+
+
+.title-median {
+   font-family: "Raleway", sans-serif; /*Pega a fonte importada, caso ele nao encontre utiliza a sans-sefif*/
+   font-size: 32px; /*tamanho da Fonte*/
+   text-align: center;
+   text-transform: uppercase;
+   margin-bottom: 24px;
+}
+
+.about-image {
+   float:left; /*Alinha a imagem esquerda e o texto a direita*/
+   margin: 0 20px 10px 0; /* 0 topo, 20 direita, 10 baixo 0 esqueda*/
+   /*diminuir o tamanho das imagens*/
+   width: 200px; /*Largura*/
+   height: auto;/*evita a disrtoçao da imagem*/
+}
+
+.about-description {
+   color: var(--gray); /*utiliza variavel de cor criado no root*/
+   text-align: justify; /*justifica o texto*/
+}
+
+/*Footer*/
+
+.main-footer {
+   background-color: var(--skyblue); /*aplica cor no fundo do rodape*/
+   background-image: url(background.jpg); /*Adiciona imagem no fundo*/
+   background-size: 100% 100%; /*Alinha os elementos nos eixos x e y*/
+   padding: 15px 0; /*Aplica espaçamento 15px cima/baixo e 0px equerda/direita*/
+}
+
+.main-footer-container {
+   display: flex; /*Deixar tudo na mesma linha*/
+   align-items: center; /* Alinha todos os elementos*/
+   justify-content: space-between; /*Colar nome de um lado e lista de icones do outro*/
+}
+
+.title-smaller {
+   font-family: "Raleway", sans-serif; /*Pegar a fonte importada*/
+   color: var(--blue); /*Aplica cor com a variavel criada no root do CSS*/
+   font-size: 26px; /*Aumenta o tamanho da fonte*/
+}
+
+.list-container {
+   display: flex; /*Deixar tudo na mesma linha*/
+   align-items: center; /* Alinha todos os elementos*/
+   justify-content: space-between; /*Colar nome de um lado e lista de icones do outro*/
+}
+
+.footer-item {
+   width: 50px;
+   height: 50px;
+   padding: 15px 0; /*Aplica espaçamento 15px cima/baixo e 0px equerda/direita*/
+}
+
+.footer-item + .footer-item {
+   margin-left: 16px; /*Aplica na mesma class seguindo em diante, ate chegar em um elemento */
+}
+
+/*Contato*/
+
+.contact-text {
+   text-align: center; /*Centralizar o texto*/
+   margin-bottom: 30px; /*Separa o paragrafo do formulario*/
+   font-size: 28px; /*Altera o tamanho da Fonte*/
+   color: var(--gray);
+}
+
+.contact {
+   background-color: var(--skyblue); /*Cor do fundo do formulario*/
+   padding: 30px; /*espaçamento*/
+   max-width: 600px; /*Tamanho definido para o projeto*/
+   margin-right: auto; /*Empurra para direita*/
+   margin-left: auto; /*Empurra para esquerda*/
+   margin-bottom: 20px; /*espaçamento para baixo*/
+}
+
+.contact-label {
+   display: block; /*coloca os elemento um em cima do outro*/
+   margin-bottom: 20px; /*Espaçamento para baixo*/
+   color: var(--blue); /*Altera cor da Fonte*/
+}
+
+.contact-field {
+   display: block; /*Coloca os elemento um em cima do outro*/
+   width: 100%; /*Ocupa o espaço maximo disponivel*/
+   height: 30px; /*Aumenta a altura do Campo*/
+   font-size: 16px; /*Altera o tamanho da Fonte*/
+   padding-left: 10px; /*Empurra o elemente dentro do campo para esquerda*/
+   border: none; /*Remove a Borda*/
+}
+.contact-field:focus { /*troca a cor do fundo da area do formulario ao clicar */
+   background-color: var(--silver); /*Cor do fundo*/
+   outline: none; /*Remove a linha interna do campo do formulario*/
+}
+
+textarea.contact-field {
+   height: 150px; /*Altera a altura do campo*/
+   padding: 10px; /*dar espaçamento em todas as direções*/
+   font-family: "Roboto", Calibri; /*Utiliza fonte importada, caso nao encontre usa alternativa*/
+}
+
+.button-form {
+   background-color: var(--blue); /*Cor do fundo do botao*/
+   color: var(--white); /*Cor da fonte do botao*/
+   border: 2px solid var(--blue); /*Adiciona borda ao botao*/
+   border-radius: 10px; /*Arredonda as bordas do botao*/
+   padding: 2px 6px; /*Aumenta o botao 2 para cima/baixo e 6 para esquerda/direita*/
+   font-weight: bold; /**aumenta o peso da fonte, deixar ela mais espeça*/
+   cursor: pointer; 
+}
+
+.button-form:hover {
+   background-color: var(--white); /*Cor do fundo do botao*/
+   color: var(--blue); /*Cor da fonte do botao*/
+}
+
+.contact-maps {
+   width: 600px;
+   margin-right: auto;
+   margin-left: auto;
+   padding-bottom: 20px;
+}
+
+/* Index*/
+
+.title-header {
+   font-family: "Madimi One", cursive; /*Utiliar a fonte Importada, 
+   caso nao encontre pega a fonte secundaria*/
+   color: var(--blue); /*Troca a cor da fonte*/
+   font-size: 38px; /*Aumenta o tamanho da fonte*/ 
+   padding-bottom: 10px; /*Cria espaçamento em baixo*/
+   text-align: center;
+}
+
+.title-large {
+   font-family: "Rock Salt", cursive; /*Utiliar a fonte Importada, 
+   caso nao encontre pega a fonte secundaria*/
+   font-size: 38px; /*Tamanho da Fonte*/
+   color: var(--blue); /*Cor da Fonte*/
+   text-align: center; /*Centraliza o texto*/
+}
+
+.description {
+   text-align: center; /**/
+   color: var(--gray);
+   padding-bottom: 10px;
+}
+
+.emphasis {
+   background-color: var(--skyblue);
+   color: var(--blue);
+   border-radius: 25px;
+}
+
+.product-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 40px;
+   padding-bottom: 30px;
+}
+
+.product {
+   display: flex; /*Colocar todos na mesma linha*/
+   flex-direction: column; /*Alinha em coluna, um embaixo do outro*/
+   align-items: center; /*Alinha os item ao centro*/
+}
+
+.product-title {
+   font-size: 20px;
+   margin-bottom: 6px;
+}
+
+.product-box {
+   border-radius: 5px;
+   /*box-shadow: 3px 3px 5px 5px black;*/
+   overflow: hidden;
+   margin-bottom: 15px;
+}
+
+.product-image {
+   width: 320px; /*travar a largura da imagem para colocar 
+   colocar 2 produtos por linha, 
+   pq o espaço do projeto é de 600px*/
+   height: 220px; /*travar a altura da imagem*/
+   margin-bottom: 20px; /*Aplica um espaço abaixo da imagem*/
+
+   transform-origin: center center;
+   object-fit: cover;
+}
+
+.product-price-container{
+   width: 100%; /*Ocupar 100% do espaço disponivel*/
+   display: flex; /*alinha os elementos na mesma linha*/
+   justify-content: space-between;
+   align-items: center;
+}
+
+.product-price {
+   font-family: "Raleway", sans-serif;
+   font-size: 20px;
+   font-weight: bold; 
+}
+
+.button-hover {
+   background-color: var(--skyblue);
+   color: var(--blue);
+   border: 2px solid var(--skyblue); 
+   border-radius: 10px;
+   padding: 4px 2px;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.button-hover:hover {
+   background-color: transparent;
+}
+.cart-table {
+   width: 100%;
+   border-collapse: collapse; /*faz com que as bordas se colapsem, entrem uma nas outra*/
+}
+
+.table-head-item {
+   text-align: start;
+   border-bottom: 1px solid var(--darkgray); /*adiciona a linha da borda embaixo*/
+   padding-bottom: 6px;
+   text-transform: uppercase; /*transforma o texto em maiusculas*/
+}
+
+.second-col, 
+.third-col {
+   width: 26%; /*Fazer a segunda e a terceira coluna ocupem o mesmo tamanho*/
+}
+
+.cart-product {
+   padding: 8px; /*Criar um espaçamento pequeno entre os elementos*/
+}
+
+.product-identification {
+   display: flex; /*Coloca os elementos na mesma linha*/
+   align-items: center; /*centraliza os objetos*/
+}
+
+.cart-product-image {
+   width: 120px;
+   height: 80px;
+}
+
+.cart-product-title {
+   margin-left: 15px; /*Cria um espaçamento entre a imagem e o Nome do produto*/
+}
+
+.cart-product-price {
+   font-family: "Raleway", sans-serif;
+}
+
+.product-qnt-input {
+   width: 43px;
+   height: 32px;
+   border: 2px solid var(--blue);
+   border-radius: 5px;
+   background-color: var(--silver);
+   text-align: center;
+}
+
+.remove-product-button {
+   background-color: var(--red);
+   color: var(--white);
+   border: 0;
+   border-radius: 5px;
+   padding: 4px 2px;
+   margin-left: 5px;
+}
+
+.remove-product-button:hover {
+   filter: brightness(0.8); /*diminui o brilho com essa propriedade*/
+}
+
+.cart-total-container {
+   border-top: 1px solid var(--darkgray);
+   text-align: end; /*leva para o final do campo*/
+   padding: 6px 16px 0 0;/*top direita baixo esquerda*/
+}
+
+.cart-total-container strong{
+   margin-right: 10px;
+}
+
+.purchase-button {
+   display: flex; /*quebrar para centralizar*/
+   padding: 16px 20px; /*cima/baixo direita/esquerda*/
+   background-color: var(--blue);
+   color: var(--white);
+   border-radius: 6px;
+   text-transform: uppercase;
+   border: 0;
+   font-weight: bold;
+   margin: 24px auto 0;/*cima esquer/direita baixo*/
+}
+
+.purchase-button:hover {
+   filter: brightness(0.8);
+}
+
+/*Responsividade*/
+
+/*825px*/
+
+@media (max-width: 825px) {
+   .title-header {
+      font-size: 34px;
+      text-align: center;
+   }
+}
+
+/*725px*/
+
+@media (max-width: 725px) {
+
+   .main-footer-container{
+      flex-direction: column;
+   }
+   .title-median {
+      font-size: 30px;
+      padding: 4px;
+   }
+}
+
+/*680px*/
+@media (max-width: 680px) {
+   .product-container {
+      justify-content: center;
+   }
+   .title-median {
+      font-size: 27px;
+      
+   }
+
+}
+
+/*600px*/
+@media (max-width: 600px) {
+   .title-large {
+      font-size: 36px;   
+   }
+   .title-median {
+      font-size: 24px;
+      
+   }
+
+}
+
+/*590px*/
+/*carrinho*/
+
+@media (max-width: 590px){
+   .product-identification {
+      flex-direction: column;
+   }
+   .product-qnt-input {
+      display: block;
+   }
+}
+
+/*560px*/
+@media (max-width: 560px) {
+   .title-large {
+      font-size: 32px;   
+   }
+   .title-median {
+      font-size: 21px;
+      
+   }
+
+}
+
+
+/*500*/
+@media (max-width: 500px) {
+   .title-header {
+      font-size: 30px;
+      text-align: center;
+   }
+   .title-large {
+      font-size: 26px;   
+   }
+   .title-median {
+      font-size: 18px;   
+   }
+   .title-smaller {
+      font-size: 22px;
+   }
+}
+
+/*405px*/
+@media (max-width: 405px) {
+   .nav-item img {
+      width: 80px;
+      height: 80px;
+   }
+
+   .header-list-container {
+      font-size: 18px;
+   }
+
+   .description {
+      font-size: 19px;
+      font-family: "Madimi One", cursive;
+   }
+
+   .title-median {
+      font-size: 26px;   
+   }
+   .title-smaller {
+      font-size: 17px;
+   }
+
+   .product-container{
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .product-image {
+      width: 315px;
+   }
+}
+
+@media (max-width: 375px) {
+   .about-image {
+   width: 160px;
+   }
+   .contact-text {
+      font-size: 25px;
+   }
+}

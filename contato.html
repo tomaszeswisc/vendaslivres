@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <!--Dados para Navegador-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+        <meta name="description" content="Programador Front-End, Senai.">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Senai">
+        <meta name="author" content="Hilton Elias"> 
+        <!--Titulo do Site-->
+        <title>Vendas Livres Store | Contato</title>
+
+        <!--Links-->
+        <link rel="shortcut icon" href="images/35594.svg" type="image/svg">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <!--Area do Site-->
+    <body>
+
+        <!--Cabeçalho-->
+        <header class="main-header">
+
+            <video autoplay muted loop id="background-video" class="video">
+                <source src="images/video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos em HTML5.
+            </video>
+
+            <!--Navegação-->
+            <nav class="main-nav container">
+
+                <!--Lista não ordenada-->
+                <ul class="header-list-container">
+                    <!--Logotipo do Site-->
+                    <a href="index.html">
+                        <img class="logo-zoom" src="images/logo.png" alt="logo" height="100" width="100">
+                    </a>
+                    
+                    <li class="nav-item">
+                        <a href="loja.html">Loja</a>
+                        <ul class="sub-items">
+                            <li><a href="loja.html#tenis-section">Tênis</a></li>
+                            <li><a href="loja.html#meias-section">Meias</a></li>
+                            <li><a href="loja.html#tocas-section">Tocas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="sobre.html">Sobre</a>
+                    </li>
+
+                </ul>
+            
+            </nav>
+          
+        </header>
+
+        <!--Corpo do Site-->    
+        
+    <main class="main-about">
+        <!-- <h1> - Titulo, <p> - parágrafo--> 
+        <h2 class="title-median">Contato</h2>
+        <p class="contact-text">Os campos com * são de preenchimento obrigatório!</p>
+        
+        <!--Corpo do formulario-->
+        <form class="contact">
+            <!--Campo Nome-->
+            <label class="contact-label">
+                Nome*
+                <input type="text" class="contact-field" required>
+            </label>
+            <!--Campo Email-->
+            <label class="contact-label">
+                E-mail*
+                <input type="email" class="contact-field" required>
+            </label>
+            <!--Campo Assunto-->
+            <label class="contact-label">
+                Assunto
+                <select class="contact-field">
+                    <option>Newsletter</option>
+                    <option>Dúvidas</option>
+                    <option>Sugestões</option>
+                    <option>Críticas</option>
+                </select>
+            </label>
+            <!--Campo Mensagem-->
+            <label class="contact-label">
+                Mensagem*
+                <textarea required class="contact-field"></textarea>
+            </label>
+            <!--Botão Enviar-->
+            <button class="button-form">Enviar</button>
+        </form>
+        <div class="contact-maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31876.942702809178!2d-41.7108632!3d-2.9257019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec3b2a815e2759%3A0x7df0df755be3ebde!2sPar%C3%B3quia%20Santa%20L%C3%BAzia!5e0!3m2!1spt-BR!2sbr!4v1706845164517!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+
+        <!--Rodape do Site-->
+        <footer class="main-footer">
+            <div class="main-footer-container"><!--Editar-->
+
+                <!--Titulo nivel 3-->
+                <h3 class="title-smaller">Vendas Livres Store - Hilton Elias 2024</h3>               
+                <ul class="list-container"><!--Editar-->
+
+                    <li class="footer-item">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="images/facebook.svg" alt="Facebook logo">
+                        </a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="images/instagram.svg" alt="instagran logo">
+                        </a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="https://www.spotfy.com/" target="_blank">
+                            <img src="images/spotify.svg" alt="Sporfy logo">
+                        </a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <img src="images/youtube.svg" alt="Youtube logo">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

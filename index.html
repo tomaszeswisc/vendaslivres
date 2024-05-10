@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <!--Dados para Navegador-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+        <meta name="description" content="Programador Front-End, Senai.">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Senai">
+        <meta name="author" content="Hilton Elias"> 
+        <!--Titulo do Site-->
+        <title>Vendas Livres Store</title>
+        <!-- Adicione o link para Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!--Links-->
+        <link rel="shortcut icon" href="images/35594.svg" type="image/svg">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <!--Area do Site-->
+    <body>
+      
+        <!--Cabeçalho-->
+        <header class="main-header">
+            <video autoplay muted loop  class="video">
+                <source src="images/video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos em HTML5.
+            </video>
+            
+
+            <!--Navegação-->
+            <nav class="main-nav container">
+
+                <!--Lista não ordenada-->
+                <ul class="header-list-container">
+                    <!--Logotipo do Site-->
+                    <a href="index.html">
+                        <img class="logo-zoom" src="images/logo.png" alt="logo" height="100" width="100">
+                    </a>
+                    
+                    <li class="nav-item">
+                        <a href="loja.html">Loja</a>
+                        <ul class="sub-items">
+                            <li><a href="loja.html#tenis-section">Tênis</a></li>
+                            <li><a href="loja.html#meias-section">Meias</a></li>
+                            <li><a href="loja.html#tocas-section">Tocas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="sobre.html">Sobre</a>
+                    </li>
+
+                </ul>
+            
+            </nav>
+            <!--<hr> 
+            <h2 class="title-header" >Vendas Livres Store</h2>-->
+        </header>
+
+        <!--Corpo do Site-->
+        <main>
+         
+            <!--Titulo Principal-->
+            <h1 class="title-large" >Seja Bem Vindo ao Maior Site de Vendas do Brasil!</h1>
+            
+            <!--Descrição do Site-->
+            <p class="description">Não sabe como se manter e por dentro de todas as novidades do mercado?<br>
+                Basta acessar o nosso site, Vendas Livres Store, e conferir os últimos lançamentos!<br>
+                Ah, e não se esqueça de se cadastrar no nosso newsletter para receber todas as novidades no seu email!<br>
+                Acesse agora mesmo!
+            </p>
+
+            <!--Titulo nivel 2-->
+            <h2 class="title-median emphasis">Confira nossos Produtos em Destaque!</h2>
+            
+            <!--Area dos Produtos em Destaque-->
+            <div class="product-container">
+
+                <!--Produto Destaque 1-->
+                <div class="product" id="product-meia-branca">
+                    <strong class="product-title">Meia Branca</strong>
+                    <div class="product-box" id="box">
+                        <img class="product-image" id="imgprod" src="images/meia-branca.jpeg" alt="meia-branca">
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 129,99</span>
+                        <button class="button-hover" type="button" onclick="addToCart('product-meia-branca')">Saiba Mais!</button>
+                    </div>
+                </div>
+
+                <!--Produto Destaque 2-->
+                <div class="product" id="product-meia-preta">
+                    <strong class="product-title">Meia Preta</strong>
+                    <div class="product-box" id="box">
+                        <img class="product-image" src="images/meia-preta.jpeg" alt="meia-preta">
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 129,99</span>
+                        <button class="button-hover" type="button" onclick="addToCart('product-meia-preta')">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+
+                <!--Produto Destaque 3-->
+                <div class="product">
+                    <strong class="product-title">Tenis Azul</strong>
+                    <div class="product-box" id="box">
+                        <img class="product-image" src="images/tenis-azul.jpeg" alt="tenis-azul">
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 129,99</span>
+                        <button class="button-hover" type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+
+                <!--Produto Destaque 4-->
+                <div class="product">
+                    <strong class="product-title">Tenis Rosa</strong>
+                    <div class="product-box" id="box">
+                        <img class="product-image" src="images/tenis-rosa.jpeg" alt="meia-branca">
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 129,99</span>
+                        <button class="button-hover" type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+
+                <!--Produto Destaque 5-->
+                <div class="product">
+                    <strong class="product-title">Kit Tocas</strong>
+                    <div class="product-box" id="box">
+                        <img class="product-image" src="images/toca-kit.jpeg" alt="toca-kit">
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 129,99</span>
+                        <button class="button-hover" type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+
+                <!--Produto Destaque 6-->
+                <div class="product">
+                    <strong class="product-title">Toca Vermelha</strong>
+                    <div class="product-box" id="box">
+                        <img class="product-image" src="images/toca-vermelha.jpeg" alt="toca-vermelha">
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 129,99</span>
+                        <button class="button-hover" type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                   
+            </div>   
+
+        </main>
+       
+        <!--Rodape do Site-->
+        <footer class="main-footer">
+            <div class="main-footer-container"><!--Editar-->
+
+                <!--Titulo nivel 3-->
+                <h3 class="title-smaller">Vendas Livres Store - Hilton Elias 2024</h3>               
+                <ul class="list-container"><!--Editar-->
+
+                    <li class="footer-item">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="images/facebook.svg" alt="Facebook logo">
+                        </a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="images/instagram.svg" alt="instagran logo">
+                        </a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="https://www.spotfy.com/" target="_blank">
+                            <img src="images/spotify.svg" alt="Sporfy logo">
+                        </a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <img src="images/youtube.svg" alt="Youtube logo">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </footer>
+
+        <!-- Botão "Voltar ao Topo" com ícone de seta para cima -->
+        <button id="voltarAoTopo"><i class="fas fa-arrow-up"></i></button>
+
+        <!-- área do JavaScript-->
+        <!--defer para carregar todo o documento antes do script-->
+        <script src="js/script.js" defer></script>
+        
+    </body>
+
+</html>
