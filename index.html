@@ -73,90 +73,109 @@
             <!--Descrição do Site-->
             <p class="description">Não sabe como se manter e por dentro de todas as novidades do mercado?<br>
                 Basta acessar o nosso site, Vendas Livres Store, e conferir os últimos lançamentos!<br>
-                Ah, e não se esqueça de se cadastrar no nosso newsletter para receber todas as novidades no seu email!<br>
-                Acesse agora mesmo!
+                Ah, e não se esqueça de se cadastrar no nosso newsletter para receber todas as novidades no seu email!
             </p>
 
+            <!--Banner-->
+            <div class="banner">
+                <div class="carousel">
+                  <div class="carousel-item">
+                    <img src="images/imagem1.jpg" alt="Imagem 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/imagem2.jpg" alt="Imagem 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/imagem3.jpg" alt="Imagem 3">
+                  </div>
+                  
+                </div>
+                <div class="prev">&#10094;</div>
+                <div class="next">&#10095;</div>
+              </div>
+
+            
             <!--Titulo nivel 2-->
             <h2 class="title-median emphasis">Confira nossos Produtos em Destaque!</h2>
             
-            <!--Area dos Produtos em Destaque-->
-            <div class="product-container">
+            <section class="home">
+                <!--Area dos Produtos em Destaque-->
+                <div class="product-container">
 
-                <!--Produto Destaque 1-->
-                <div class="product" id="product-meia-branca">
-                    <strong class="product-title">Meia Branca</strong>
-                    <div class="product-box" id="box">
-                        <img class="product-image" id="imgprod" src="images/meia-branca.jpeg" alt="meia-branca">
+                    <!--Produto Destaque 1-->
+                    <div class="product" id="product-meia-branca">
+                        <strong class="product-title">Meia Branca</strong>
+                        <div class="product-box" id="box">
+                            <img class="product-image" id="imgprod" src="images/meia-branca.jpeg" alt="meia-branca">
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">R$ 129,99</span>
+                            <button class="button-hover" type="button" onclick="addToCart('product-meia-branca')">Clique e Saiba Mais!</button>
+                        </div>
                     </div>
-                    <div class="product-price-container">
-                        <span class="product-price">R$ 129,99</span>
-                        <button class="button-hover" type="button" onclick="addToCart('product-meia-branca')">Saiba Mais!</button>
-                    </div>
-                </div>
 
-                <!--Produto Destaque 2-->
-                <div class="product" id="product-meia-preta">
-                    <strong class="product-title">Meia Preta</strong>
-                    <div class="product-box" id="box">
-                        <img class="product-image" src="images/meia-preta.jpeg" alt="meia-preta">
+                    <!--Produto Destaque 2-->
+                    <div class="product" id="product-meia-preta">
+                        <strong class="product-title">Meia Preta</strong>
+                        <div class="product-box" id="box">
+                            <img class="product-image" src="images/meia-preta.jpeg" alt="meia-preta">
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">R$ 129,99</span>
+                            <button class="button-hover" type="button" onclick="addToCart('product-meia-preta')">Clique e Saiba Mais!</button>
+                        </div>
                     </div>
-                    <div class="product-price-container">
-                        <span class="product-price">R$ 129,99</span>
-                        <button class="button-hover" type="button" onclick="addToCart('product-meia-preta')">Adicionar ao carrinho</button>
-                    </div>
-                </div>
 
-                <!--Produto Destaque 3-->
-                <div class="product">
-                    <strong class="product-title">Tenis Azul</strong>
-                    <div class="product-box" id="box">
-                        <img class="product-image" src="images/tenis-azul.jpeg" alt="tenis-azul">
+                    <!--Produto Destaque 3-->
+                    <div class="product" id="product-tenis-azul">
+                        <strong class="product-title">Tenis Azul</strong>
+                        <div class="product-box" id="box">
+                            <img class="product-image" src="images/tenis-azul.jpeg" alt="tenis-azul">
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">R$ 129,99</span>
+                            <button class="button-hover" type="button" onclick="addToCart('product-tenis-azul')">Clique e Saiba Mais!</button>
+                        </div>
                     </div>
-                    <div class="product-price-container">
-                        <span class="product-price">R$ 129,99</span>
-                        <button class="button-hover" type="button">Adicionar ao carrinho</button>
-                    </div>
-                </div>
 
-                <!--Produto Destaque 4-->
-                <div class="product">
-                    <strong class="product-title">Tenis Rosa</strong>
-                    <div class="product-box" id="box">
-                        <img class="product-image" src="images/tenis-rosa.jpeg" alt="meia-branca">
+                    <!--Produto Destaque 4-->
+                    <div class="product" id="product-tenis-rosa">
+                        <strong class="product-title">Tenis Rosa</strong>
+                        <div class="product-box" id="box">
+                            <img class="product-image" src="images/tenis-rosa.jpeg" alt="tenis-rosa">
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">R$ 129,99</span>
+                            <button class="button-hover" type="button" onclick="addToCart('product-tenis-rosa')">Clique e Saiba Mais!</button>
+                        </div>
                     </div>
-                    <div class="product-price-container">
-                        <span class="product-price">R$ 129,99</span>
-                        <button class="button-hover" type="button">Adicionar ao carrinho</button>
-                    </div>
-                </div>
 
-                <!--Produto Destaque 5-->
-                <div class="product">
-                    <strong class="product-title">Kit Tocas</strong>
-                    <div class="product-box" id="box">
-                        <img class="product-image" src="images/toca-kit.jpeg" alt="toca-kit">
+                    <!--Produto Destaque 5-->
+                    <div class="product" id="product-toca-kit">
+                        <strong class="product-title">Kit Tocas</strong>
+                        <div class="product-box" id="box">
+                            <img class="product-image" src="images/toca-kit.jpeg" alt="toca-kit">
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">R$ 129,99</span>
+                            <button class="button-hover" type="button" onclick="addToCart('product-toca-kit')">Clique e Saiba Mais!</button>
+                        </div>
                     </div>
-                    <div class="product-price-container">
-                        <span class="product-price">R$ 129,99</span>
-                        <button class="button-hover" type="button">Adicionar ao carrinho</button>
-                    </div>
-                </div>
 
-                <!--Produto Destaque 6-->
-                <div class="product">
-                    <strong class="product-title">Toca Vermelha</strong>
-                    <div class="product-box" id="box">
-                        <img class="product-image" src="images/toca-vermelha.jpeg" alt="toca-vermelha">
+                    <!--Produto Destaque 6-->
+                    <div class="product" id="product-toca-vermelha">
+                        <strong class="product-title">Toca Vermelha</strong>
+                        <div class="product-box" id="box">
+                            <img class="product-image" src="images/toca-vermelha.jpeg" alt="toca-vermelha">
+                        </div>
+                        <div class="product-price-container">
+                            <span class="product-price">R$ 129,99</span>
+                            <button class="button-hover" type="button" onclick="addToCart('product-toca-vermelha')">Clique e Saiba Mais!</button>
+                        </div>
                     </div>
-                    <div class="product-price-container">
-                        <span class="product-price">R$ 129,99</span>
-                        <button class="button-hover" type="button">Adicionar ao carrinho</button>
-                    </div>
-                </div>
-                   
-            </div>   
-
+                    
+                </div>   
+            </section>    
         </main>
        
         <!--Rodape do Site-->
@@ -198,7 +217,10 @@
         </footer>
 
         <!-- Botão "Voltar ao Topo" com ícone de seta para cima -->
-        <button id="voltarAoTopo"><i class="fas fa-arrow-up"></i></button>
+        <button id="voltarAoTopo">
+            <img class="scroll" src="images/arrow_up.png" alt="Voltar ao Topo">
+        </button>
+        
 
         <!-- área do JavaScript-->
         <!--defer para carregar todo o documento antes do script-->

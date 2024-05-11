@@ -34,36 +34,114 @@ li {
    list-style-type: none; 
 }
 
-/*Botão voltar ao topo*/
+.home {
+   margin: 15px;
+}
 
-#voltarAoTopo {
-   display: none;
-   position:fixed;
-   bottom: 200px;
-   right: 20px;
-   background-color: var(--gray);
-   color: var(--blue);
-   border: none;
-   padding: 10px;
+/*----------------------Banner----------------------------------*/
+
+/* Define as propriedades para o banner */
+.banner {
+   /* Permite que os elementos filhos se posicionem relativamente ao banner */
+   position: relative;
+   /* Garante que o banner não exceda a largura máxima do seu contêiner */
+   max-width: 100%;
+   /* Oculta qualquer conteúdo que ultrapasse as dimensões do banner */
+   overflow: hidden;
+   padding-bottom: 20px;
+}
+
+/* Define as propriedades para o carrossel de imagens */
+.carousel {
+   /* Cria um layout de linha flexível para os itens do carrossel */
+   display: flex;
+   /* Adiciona uma transição suave ao transformar o carrossel */
+   transition: transform 0.5s ease;
+}
+
+/* Define as propriedades para cada item do carrossel */
+.carousel-item {
+   /* Define a largura padrão de cada item como 100% do contêiner */
+   flex: 0 0 100%;
+}
+
+/* Define as propriedades para as imagens dentro dos itens do carrossel */
+.carousel-item img {
+   /* Garante que as imagens ocupem 100% da largura do item */
+   width: 100%;
+   /* Mantém a proporção da altura das imagens */
+   height: auto;
+   /* Exibe as imagens como blocos para evitar espaços indesejados */
+   display: block;
+}
+
+/* Define as propriedades para os botões de navegação do carrossel */
+.prev, .next {
+   /* Transforma o cursor em uma mão ao passar sobre os botões */
    cursor: pointer;
-   border-radius: 50%;
-   margin-bottom: 50px;
+   /* Define a posição absoluta dos botões em relação ao banner */
+   position: absolute;
+   /* Alinha verticalmente os botões ao centro do banner */
+   top: 50%;
+   /* Move os botões para o centro vertical do banner */
+   transform: translateY(-50%);
+   /* Define o tamanho da fonte dos botões */
+   font-size: 30px;
+   /* Define a cor do texto dos botões como branca */
+   color: white;
+   /* Define a cor de fundo dos botões com transparência */
+   background-color: rgba(0, 0, 0, 0.5);
+   /* Adiciona um espaço interno de 10px aos botões */
+   padding: 10px;
+   /* Define a camada de sobreposição dos botões */
+   z-index: 2;
 }
-#voltarAoTopo i {
-   font-size: 20px;
+
+/* Define as propriedades para o botão de navegação anterior */
+.prev {
+   /* Posiciona o botão anterior à esquerda do banner */
+   left: 10px;
 }
+
+/* Define as propriedades para o botão de navegação seguinte */
+.next {
+   /* Posiciona o botão seguinte à direita do banner */
+   right: 10px;
+}
+
+
+/*-----------------Botão voltar ao topo----------------------------*/
+
+/* Estilo para o botão "Voltar ao Topo" */
+#voltarAoTopo {
+   display: none; /* Inicialmente oculto até que a página seja rolada para baixo */
+   position: fixed; /* Mantém o botão fixo mesmo quando a página é rolada */
+   bottom: 350px; /* Distância em relação ao fundo da janela */
+   right: 50px; /* Distância em relação à borda direita da janela */
+   background-color: var(--gray); /* Cor de fundo do botão */
+   color: var(--blue); /* Cor do texto do botão */
+   border: none; /* Sem borda */
+   padding: 0; /* Sem preenchimento interno */
+   cursor: pointer; /* Cursor do mouse muda para ponteiro ao passar sobre o botão */
+   border-radius: 50%; /* Borda arredondada para criar um botão circular */
+}
+
+/* Estilo para a imagem dentro do botão */
+.scroll {
+   width: 50px; /* Largura da imagem */
+   height: 50px; /* Altura da imagem */
+}
+
 
 /*Header*/
 
 .main-header {
-    background-image: url(background-image.png); /*Adiciona imagem no fundo*/
-    background-position: 50% 39%; /*Alinha os elementos nos eixos x e y*/
     position: relative; /* Para manter o conteúdo sobre o vídeo */
     z-index: 1; /* Para que o conteúdo fique acima do vídeo */
     display: flex; /*colocar elementos centralizados*/
     flex-direction: column; /*alinha s elementos um embaixo do outro*/
     align-items: center; /*centralizar os elementos*/
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 .main-nav {
@@ -85,7 +163,7 @@ li {
     color: var(--blue);
  }
 
- /* Estilo para os subitens */
+ /*-------------------Estilo para os subitens---------------------------*/
  
  /* Ocultar os subitens por padrão */
 .sub-items  {
@@ -119,6 +197,8 @@ li {
    color: var(--blue);
  }
 
+ /*---------------------------Vídeo-------------------------------------*/
+
  /* Estilo para o vídeo de fundo */
 .video {
    position: absolute;
@@ -147,7 +227,8 @@ li {
    border-radius: 5px;
    padding: 0px 3px;
  }
- 
+
+/*--------------------------Logo Zoom--------------------------------------*/ 
 .logo-zoom {
    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
 }
@@ -155,6 +236,8 @@ li {
 .logo-zoom:hover {
    transform: scale(1.4);/* Aumenta o tamanho do logo em 20% ao passar o mouse sobre ele */
 }
+
+
  .main-about {
    padding: 40px 0px 64px;
 }
@@ -192,7 +275,7 @@ li {
 
 .main-footer {
    background-color: var(--skyblue); /*aplica cor no fundo do rodape*/
-   background-image: url(background.jpg); /*Adiciona imagem no fundo*/
+   background-image: url(footer.jpg); /*Adiciona imagem no fundo*/
    background-size: 100% 100%; /*Alinha os elementos nos eixos x e y*/
    padding: 15px 0; /*Aplica espaçamento 15px cima/baixo e 0px equerda/direita*/
 }
@@ -341,8 +424,8 @@ textarea.contact-field {
 }
 
 .product-box {
-   border-radius: 5px;
-   /*box-shadow: 3px 3px 5px 5px black;*/
+   border-radius: 25px;
+   box-shadow: 3px 3px 5px 5px var(--gray);
    overflow: hidden;
    margin-bottom: 15px;
 }
@@ -351,9 +434,7 @@ textarea.contact-field {
    width: 320px; /*travar a largura da imagem para colocar 
    colocar 2 produtos por linha, 
    pq o espaço do projeto é de 600px*/
-   height: 220px; /*travar a altura da imagem*/
-   margin-bottom: 20px; /*Aplica um espaço abaixo da imagem*/
-
+   height: 200px; /*travar a altura da imagem*/
    transform-origin: center center;
    object-fit: cover;
 }

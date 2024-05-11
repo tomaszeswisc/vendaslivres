@@ -1,3 +1,26 @@
+// Código JavaScript para rolar a página para o topo 
+
+    // Seleciona o botão
+    const botaoVoltarAoTopo = document.getElementById('voltarAoTopo');
+
+    // Adiciona um evento de clique ao botão
+    botaoVoltarAoTopo.addEventListener('click', () => {
+        // Faz a página voltar ao topo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Adiciona um evento de rolagem à janela
+    window.addEventListener('scroll', () => {
+        // Verifica a posição da rolagem
+        if (window.scrollY > 100) { // Exibe o botão quando a página é rolada para baixo
+            botaoVoltarAoTopo.style.display = 'block';
+        } else { // Oculta o botão quando a página está no topo
+            botaoVoltarAoTopo.style.display = 'none';
+        }
+    });
+
+
+
 // Este evento é acionado quando o DOM está completamente carregado
 document.addEventListener("DOMContentLoaded", function () {
     // Seleciona todos os botões de remoção de produtos
